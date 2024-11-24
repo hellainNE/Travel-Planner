@@ -53,25 +53,36 @@ public class Main {
 
 //action listener for enter button for (password)
     enterButton.addActionListener(new ActionListener() {
-    
-    public void actionPerformed(ActionEvent e){
+    public void actionPerformed(ActionEvent e) {
     String password = passwordField.getText();
-    if(password.equals("123")){
+
+    if (password.equals("123")) {
         frame1.removeAll();
         openHomeScreen(frame1);
-    }else{
-        System.out.println("Incorrect password!...");
+    } else {
+        Label inpassLabel = new Label("Incorrect password! Please try again.");
+        Font font4 = new Font("Arial", Font.BOLD, 14);
+        inpassLabel.setFont(font4);
+        inpassLabel.setAlignment(Label.CENTER);
+
+    // Position the label in the center
+    inpassLabel.setBounds((frame1.getWidth() - 300) / 2, 180, 320, 30);
+    frame1.add(inpassLabel);
+
+    //para ni mu automatic ug appear ang home screen
+    frame1.setSize(frame1.getWidth() + 1, frame1.getHeight());
+    frame1.setSize(frame1.getWidth() - 1, frame1.getHeight());
     }
-    frame1.repaint();
     }
-    });
- 
+});
+
 //closing the window
     frame1.addWindowListener(new WindowAdapter() {
     public void windowClosing(WindowEvent e) {
             System.exit(0);
     }
     });
+
 }
 
  // a new frame for the home screen
