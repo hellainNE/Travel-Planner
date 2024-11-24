@@ -1,2 +1,2 @@
 # Travel Planner
- This is out Simple Travel Planner Final Performance Task  in Object Oriented Programming (JAVA)
+ This is our Simple Travel Planner Final Performance Task  in Object Oriented Programming (JAVA)
