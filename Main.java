@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import java.awt.event.*;
 
@@ -12,7 +11,7 @@ public class Main {
     frame1.setLocation(250,100);
     frame1.setLayout(null);
     frame1.setVisible(true);
-
+    frame1.setBackground(Color.orange );
 // Welcome Label
     Label aLabel = new Label("WELCOME TO TRAVEL PLANNER");
     aLabel.setAlignment(Label.CENTER);  
@@ -95,9 +94,17 @@ public static void openHomeScreen(Frame frame) {
     homeLabel.setFont(font3);  
 //button for each options
     Button addButton = new Button("Add Travel Plan");
+    addButton.setForeground(Color.white);
+    addButton.setBackground(Color.BLACK);
     Button updateButton = new Button("Update Travel Plan");
+    updateButton.setForeground(Color.white);
+    updateButton.setBackground(Color.BLACK);
     Button viewButton = new Button("View Travel Plan");
+    viewButton.setForeground(Color.white);
+    viewButton.setBackground(Color.BLACK);
     Button deleteButton = new Button("Delete Travel Plan");
+    deleteButton.setForeground(Color.white);
+    deleteButton.setBackground(Color.BLACK);
     Font buttonFont = new Font("Arial", Font.BOLD, 14);
 
     addButton.setFont(buttonFont);
