@@ -5,10 +5,11 @@ import java.util.Map;
 public class UpdateTravelPlanScreen extends JPanel {
 
     public static final Map<String, TravelPlan> travelPlans = ViewTravelPlanScreen.travelPlans;
+    private Image backgroundImage; // Placeholder for background image
 
     public UpdateTravelPlanScreen(JFrame frame, String planId) {
         setLayout(null);
-        setBackground(Color.LIGHT_GRAY);
+        backgroundImage = new ImageIcon("background3.jpg").getImage();
 
         TravelPlan plan = travelPlans.get(planId);
 

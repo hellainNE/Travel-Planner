@@ -7,9 +7,8 @@ public class HomeScreen extends JPanel {
 
     public HomeScreen(JFrame frame) {
         setLayout(null);
-        setBackground(Color.ORANGE); // Remove this if using a background image
-        backgroundImage = new ImageIcon("path/to/your/image.jpg").getImage(); // Set your background image path
-
+        backgroundImage = new ImageIcon("background3.jpg").getImage();
+        
         JLabel titleLabel = new JLabel("Select an Option:", SwingConstants.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setBounds(300, 40, 200, 50);

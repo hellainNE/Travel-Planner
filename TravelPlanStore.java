@@ -1,8 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
 public class TravelPlanStore {
-    // Shared list to store all travel plans
-    public static final List<Map<String, String>> travelPlans = new ArrayList<>();
+    // Use a map where each plan is associated with a unique ID (e.g., planId)
+    public static final Map<String, TravelPlan> travelPlans = new HashMap<>();
 }

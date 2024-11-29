@@ -10,7 +10,7 @@ public class ViewTravelPlanScreen extends JPanel {
 
     public ViewTravelPlanScreen(JFrame frame) {
         setLayout(null);
-        backgroundImage = new ImageIcon("path/to/your/image.jpg").getImage(); // Set your background image path
+        backgroundImage = new ImageIcon("background3.jpg").getImage(); // Set your background image path
         setBackground(Color.LIGHT_GRAY);
 
         JLabel titleLabel = new JLabel("Your Travel Plans", SwingConstants.CENTER);

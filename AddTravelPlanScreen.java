@@ -7,8 +7,7 @@ public class AddTravelPlanScreen extends JPanel {
 
     public AddTravelPlanScreen(JFrame frame) {
         setLayout(null);
-        setBackground(Color.LIGHT_GRAY); // Remove this if using a background image
-        backgroundImage = new ImageIcon("path/to/your/image.jpg").getImage(); // Set your background image path
+        backgroundImage = new ImageIcon("background3.jpg").getImage();
 
         JLabel titleLabel = new JLabel("Add Travel Plan", SwingConstants.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
