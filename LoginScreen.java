@@ -16,15 +16,15 @@ public class LoginScreen extends JPanel {
 
         JLabel passwordLabel = new JLabel("Enter your Password", SwingConstants.CENTER);
         passwordLabel.setFont(new Font("Arial", Font.BOLD, 14));
-        passwordLabel.setBounds(375, 198, 150, 30);
+        passwordLabel.setBounds(370, 198, 150, 30);
 
         JPasswordField passwordField = new JPasswordField();
-        passwordField.setBounds(350, 230, 200, 30);
+        passwordField.setBounds(320, 230, 250, 33);
 
         JButton enterButton = new JButton("Enter");
         enterButton.setFont(new Font("Arial", Font.BOLD, 14));
-        enterButton.setBackground(new Color(0, 128, 255)); // Travel vibes blue
-        enterButton.setBounds(370, 315, 150, 30);
+        enterButton.setBackground(Color.GREEN);
+        enterButton.setBounds(370, 315, 150, 40);
         enterButton.addActionListener((ActionEvent e) -> {
             String password = new String(passwordField.getPassword());
             if ("123".equals(password)) {

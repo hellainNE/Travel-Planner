@@ -9,12 +9,12 @@ public class HomeScreen extends JPanel {
         setLayout(null);
         backgroundImage = new ImageIcon("background3.jpg").getImage();
         
-        JLabel titleLabel = new JLabel("Select an Option:", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        titleLabel.setBounds(300, 40, 200, 50);
+        JLabel titleLabel = new JLabel("PLAN YOUR ADVENTURE", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Georgia", Font.BOLD, 24));
+        titleLabel.setBounds(275, 75, 350, 55);
 
-        JButton addButton = createButton("Add Travel Plan", 120, e -> openAddTravel(frame));
-        JButton viewButton = createButton("View Travel Plan", 180, e -> openViewTravel(frame));
+        JButton addButton = createButton("Add Travel Plan", 180, e -> openAddTravel(frame));
+        JButton viewButton = createButton("View Travel Plan", 255, e -> openViewTravel(frame));
 
         add(titleLabel);
         add(addButton);
@@ -23,8 +23,8 @@ public class HomeScreen extends JPanel {
 
     private JButton createButton(String text, int y, java.awt.event.ActionListener action) {
         JButton button = new JButton(text);
-        button.setFont(new Font("Arial", Font.BOLD, 14));
-        button.setBounds(300, y, 200, 40);
+        button.setFont(new Font("Arial", Font.BOLD, 15));
+        button.setBounds(300, y, 280, 50);
         button.setBackground(new Color(0, 128, 255)); // Travel vibes blue
         button.setForeground(Color.WHITE);
         button.addActionListener(action);

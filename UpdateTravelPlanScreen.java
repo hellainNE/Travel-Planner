@@ -4,55 +4,55 @@ import java.util.Map;
 
 public class UpdateTravelPlanScreen extends JPanel {
 
-    public static final Map<String, TravelPlan> travelPlans = ViewTravelPlanScreen.travelPlans;
-    private Image backgroundImage; // Placeholder for background image
+    public static final Map<String, travelPlans> travelPlans = ViewTravelPlanScreen.travelPlans;
+    private Image backgroundImage;
 
     public UpdateTravelPlanScreen(JFrame frame, String planId) {
         setLayout(null);
         backgroundImage = new ImageIcon("background3.jpg").getImage();
 
-        TravelPlan plan = travelPlans.get(planId);
+        travelPlans plan = travelPlans.get(planId);
 
         JLabel titleLabel = new JLabel("Update Travel Plan", SwingConstants.CENTER);
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        titleLabel.setBounds(300, 40, 200, 50);
+        titleLabel.setFont(new Font("Georgia", Font.BOLD, 20));
+        titleLabel.setBounds(288, 60, 350, 50);
         add(titleLabel);
 
         JLabel nameLabel = new JLabel("Name:");
-        nameLabel.setBounds(250, 120, 80, 30);
+        nameLabel.setBounds(290, 140, 80, 30);
         add(nameLabel);
 
         JTextField nameField = new JTextField(plan.getName());
-        nameField.setBounds(340, 120, 200, 30);
+        nameField.setBounds(370, 140, 250, 30);
         add(nameField);
 
         JLabel dateLabel = new JLabel("Date:");
-        dateLabel.setBounds(250, 160, 80, 30);
+        dateLabel.setBounds(290, 180, 80, 30);
         add(dateLabel);
 
         JTextField dateField = new JTextField(plan.getDate());
-        dateField.setBounds(340, 160, 200, 30);
+        dateField.setBounds(370, 180, 250, 30);
         add(dateField);
 
         JLabel destinationLabel = new JLabel("Destination:");
-        destinationLabel.setBounds(250, 200, 80, 30);
+        destinationLabel.setBounds(290, 220, 80, 30);
         add(destinationLabel);
 
         JTextField destinationField = new JTextField(plan.getDestination());
-        destinationField.setBounds(340, 200, 200, 30);
+        destinationField.setBounds(370, 220, 250, 30);
         add(destinationField);
 
-        JLabel budgetLabel = new JLabel("Budget ($):");
-        budgetLabel.setBounds(250, 240, 80, 30);
+        JLabel budgetLabel = new JLabel("Budget (₱):");
+        budgetLabel.setBounds(290, 260, 80, 30);
         add(budgetLabel);
 
         JTextField budgetField = new JTextField(String.valueOf(plan.getBudget()));
-        budgetField.setBounds(340, 240, 200, 30);
+        budgetField.setBounds(370, 260, 250, 30);
         add(budgetField);
 
         // Save Button
         JButton saveButton = new JButton("Save");
-        saveButton.setBounds(300, 300, 100, 30);
+        saveButton.setBounds(370, 330, 100, 30);
         saveButton.setBackground(Color.GREEN);
         saveButton.addActionListener(e -> {
             plan.setName(nameField.getText());
@@ -71,66 +71,72 @@ public class UpdateTravelPlanScreen extends JPanel {
 
         // Back Button
         JButton backButton = new JButton("Back");
-        backButton.setBounds(410, 300, 100, 30);
+        backButton.setBounds(500, 330, 100, 30);
         backButton.setBackground(Color.RED);
         backButton.addActionListener(e -> {
             frame.getContentPane().removeAll();
-            frame.add(new ViewTravelPlanScreen(frame)); // Go back to View Travel Plans
+            frame.add(new ViewTravelPlanScreen(frame));
             frame.revalidate();
             frame.repaint();
         });
         add(backButton);
     }
 
-    // TravelPlan class to hold travel plan data
-    public static class TravelPlan {
-      private String name;
-      private String date;
-      private String destination;
-      private double budget;
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        if (backgroundImage != null) {
+            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        }
+    }
+
+    //travel plan for storage class
+    
+    public static class travelPlans {
+        private String name;
+        private String date;
+        private String destination;
+        private double budget;
   
-      // Constructor accepting name, date, destination, and budget
-      public TravelPlan(String name, String date, String destination, double budget) {
-          this.name = name;
-          this.date = date;
-          this.destination = destination;
-          this.budget = budget;
-      }
+        // Constructor accepting name, date, destination, and budget
+        public travelPlans(String name, String date, String destination, double budget) {
+            this.name = name;
+            this.date = date;
+            this.destination = destination;
+            this.budget = budget;
+        }
   
-      // Getters and Setters
-      public String getName() {
-          return name;
-      }
+        // Getters and Setters
+        public String getName() {
+            return name;
+        }
   
-      public void setName(String name) {
-          this.name = name;
-      }
+        public void setName(String name) {
+            this.name = name;
+        }
   
-      public String getDate() {
-          return date;
-      }
+        public String getDate() {
+            return date;
+        }
   
-      public void setDate(String date) {
-          this.date = date;
-      }
+        public void setDate(String date) {
+            this.date = date;
+        }
   
-      public String getDestination() {
-          return destination;
-      }
+        public String getDestination() {
+            return destination;
+        }
   
-      public void setDestination(String destination) {
-          this.destination = destination;
-      }
+        public void setDestination(String destination) {
+            this.destination = destination;
+        }
   
-      public double getBudget() {
-          return budget;
-      }
+        public double getBudget() {
+            return budget;
+        }
   
-      public void setBudget(double budget) {
-          this.budget = budget;
-      }
-  }
-  
-  
-  
+        public void setBudget(double budget) {
+            this.budget = budget;
+        }
+    }
 }
